@@ -34,3 +34,14 @@ Content-Type: application/json
   "username": { "$ne": null },
   "password": { "$ne": null }
 }
+
+### XSS - Criar usuário com script malicioso
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "<script>alert('XSS')</script>",
+  "email": "xss@teste.com",
+  "password": "123456"
+}
+

@@ -1,0 +1,26 @@
+### Criar novo usuário
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "joao",
+  "email": "joao@email.com",
+  "password": "123456"
+}
+
+
+### Listar todos os usuários
+GET http://localhost:3000/api/users
+
+
+### Atualizar usuário
+PUT http://localhost:3000/api/users/<ID_DO_USUARIO>
+Content-Type: application/json
+
+{
+  "email": "novoemail@email.com"
+}
+
+
+### Deletar usuário
+DELETE http://localhost:3000/api/users/<ID_DO_USUARIO>

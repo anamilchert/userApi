@@ -21,6 +21,7 @@ Projeto desenvolvido para a disciplina de Segurança da Informação, contendo d
 ## Crie um arquivo .env com:
 
 MONGO_URI=mongodb://localhost:27017/nome-do-banco
+
 JWT_SECRET=sua_chave_secreta
 
 ---
@@ -33,8 +34,8 @@ npm install express mongoose dotenv bcrypt jsonwebtoken
 ```
 
 ## para rodar:
-v1.0: node app.js
-v2.0: node server.js
+- v1.0: node app.js
+- v2.0: node server.js
 
 Testes
 Utilize a extensão REST Client no VS Code e o arquivo testes.http incluído no projeto para testar as rotas de registro, login, CRUD e simulações de ataques (v1.0).

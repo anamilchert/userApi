@@ -1,0 +1,35 @@
+### Registro de novo usuário
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "username": "usuarioTeste",
+  "email": "teste@example.com",
+  "password": "senhaSegura123"
+}
+
+### Login do usuário
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email": "teste@example.com",
+  "password": "senhaSegura123"
+}
+
+### Listar todos os usuários
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjYwNDhjMzlmMDYwMDMwOWJjMmJlZSIsImlhdCI6MTc0NzMyMjA3MSwiZXhwIjoxNzQ3MzI1NjcxfQ.UwduXli204X1t-BJeSEvfgfhcWbnDEbF41Uf0Dt6oCk
+
+### Atualizar usuário 
+PUT http://localhost:3000/api/users/6826048c39f0600309bc2bee
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjYwNDhjMzlmMDYwMDMwOWJjMmJlZSIsImlhdCI6MTc0NzMyMjA3MSwiZXhwIjoxNzQ3MzI1NjcxfQ.UwduXli204X1t-BJeSEvfgfhcWbnDEbF41Uf0Dt6oCk
+Content-Type: application/json
+
+{
+  "username": "usuarioAtualizado"
+}
+
+### Deletar um usuário (protegido)
+DELETE http://localhost:3000/api/users/6826048c39f0600309bc2bee
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjYwNDhjMzlmMDYwMDMwOWJjMmJlZSIsImlhdCI6MTc0NzMyMjA3MSwiZXhwIjoxNzQ3MzI1NjcxfQ.UwduXli204X1t-BJeSEvfgfhcWbnDEbF41Uf0Dt6oCk

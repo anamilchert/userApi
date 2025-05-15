@@ -34,4 +34,18 @@ router.delete('/users/:id', async (req, res) => {
   }
 });
 
+router.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const user = await User.findOne({ username, password });
+    if (user) {
+      res.status(200).json({ message: 'Login bem-sucedido' });
+    } else {
+      res.status(401).json({ message: 'Credenciais inválidas' });
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+})
+
 module.exports = router;
